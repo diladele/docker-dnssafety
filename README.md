@@ -75,6 +75,6 @@ In case of any questions, please contact [support@diladele.com](mailto:support@d
 
 # References
 
-* For standalone VMware ESXi/vSphere or Microsoft-HyperV virtual appliance please visit [Dns Safety Virtual Appliance](https://dnssafety.diladele.com/download.html).
+* For standalone VMware ESXi/vSphere virtual appliance please visit [Dns Safety Virtual Appliance](https://dnssafety.diladele.com/download.html).
 * Virtual Appliance can also be deployed natively in [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/diladele.dnsfilter) or [Amazon AWS](https://aws.amazon.com/marketplace/pp/B083M59WBH)
 * Detailed documentation for the project is [available online](https://dnssafety.diladele.com/docs/)
