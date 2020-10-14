@@ -6,10 +6,10 @@ This project provides a full Docker image for the latest version of [Diladele Dn
 Dns Safety is a free DNS server that enables filtering and sanitizing DNS requests in your network.
 Main features:
  * seamlessly works for all devices in your network
- * policy based filtering, apply different filtering levels for different devices
- * block sites with inappropriate content by category, enable safe search in Google, Bing, YouTube
- * block annoying ads
- * get extensive insights about the traffic in your network
+ * enables policy based filtering: different filtering levels can be used for different devices
+ * blocks sites with inappropriate content by category, enables safe search in Google, Bing and YouTube
+ * blocks annoying ads
+ * provides extensive insights about the traffic in your network
 
 For more information, please visit our [official website](https://dnssafety.diladele.com/)
 
@@ -25,9 +25,9 @@ If you had the image already deployed please see how you can [clean before updat
 
 In order to run the product please execute the following command - it will start a DNS server on your machine on port 53:
 ```
-    docker run -dt --name dnssafety -p 8000:8000 -p 53:53 -p 80:80 -p 443:443 diladele/dnssafety:0.16
+    docker run -dt --name dnssafety -p 8000:8000 -p 53:53 -p 80:80 -p 443:443 -v dnssafety_etc:/opt/dnssafety/etc -v dnssafety_var:/opt/dnssafety/var diladele/dnssafety:0.16
 ```
-After executing this command, you can connect to the Admin Console typing [http://localhost:8000](http://localhost:8000) in your browser. To enable filtering, you need to specify the IP address of the machine where the docker container as the DNS server:
+After executing this command, you can connect to the Admin Console typing [http://localhost:8000](http://localhost:8000) in your browser. To enable filtering, you need to specify the IP address of the machine where the docker container is running as your DNS server:
  * either explicitly on your client device
  * or configure the router to use the new DNS server 
 
