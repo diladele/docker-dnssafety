@@ -1,0 +1,10 @@
+#!/bin/bash
+
+dsdnsdstatus=`sv status dsdnsd |cut -d ' ' -f 1`
+
+if [[ "$dsdnsdstatus" != "run:" ]]
+then exit 1
+fi
+
+source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND
+
