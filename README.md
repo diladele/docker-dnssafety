@@ -71,7 +71,7 @@ Community Edition of Diladele Dns Safety is free.
 
 # Support
 
-In case of any questions, please contact [support@diladele.com](mailto:support@diladele.com?subject=[GitHub]%Dns%20Safety%20Question)
+In case of any questions, please contact [support@diladele.com](mailto:support@diladele.com?subject=[GitHub]%20Dns%20Safety%20Question)
 
 # References
 
