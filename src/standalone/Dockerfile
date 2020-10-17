@@ -23,8 +23,6 @@ RUN apt-get install -y --no-install-recommends apt-utils && \
     echo UTC >/etc/timezone && ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
     # there are some bugs in Ubuntu 18 and Python3 environment concerning the LDAP module,
     # so we fix them by removing obsolete ldap modules and reinstalling the correct one
-    # pip3 uninstall ldap ldap3 python-ldap || true && \
-    # pip3 install python-ldap && \
     # download and install diladele packages
     curl http://packages.diladele.com/dnssafety-ui/${DSDNS_UI_VER}/${ARCH}/release/${OSNAME}/dnssafety-ui-${DSDNS_UI_VER}_$ARCH.deb -o dnssafety-ui-${DSDNS_UI_VER}_$ARCH.deb && \
     curl http://packages.diladele.com/dnssafety-core/${DSDNS_VER}/${ARCH}/release/ubuntu18/dnssafety-${DSDNS_VER}_${ARCH}.deb -o dnssafety-${DSDNS_VER}_${ARCH}.deb && \
@@ -55,7 +53,6 @@ RUN apt-get install -y --no-install-recommends apt-utils && \
     rm -rf dnssafety-${DSDNS_VER}_${ARCH}.deb dnssafety-ui-${DSDNS_UI_VER}_${ARCH}.deb && \
     apt autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
-    #mkdir /etc/service/apache2 /etc/service/dsdnsd && \
     # too many hardlinks in phusion-basimage for crontab
     touch /etc/crontab
 
